@@ -1,0 +1,37 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+	<main>
+	<h1>Minimal login api</h1>
+	<p>this api has 3 main routes </p>
+	<div class="container">
+		<div class="element">
+			<span><strong>Post</strong> /register</span>
+			<p>It takes a json data payload of username, password, email and creates a user on mongodb atlas</p>
+			<code class="language-bash">
+				curl -d '{"username":"rom","email":"tom@rom.co","password":"apple23"}' -H 'Content-Type: application/json' -X POST http://auth-internship-app.herokuapp.com/register
+			</code>
+		</div>
+		<div class="element">
+			<span><strong>GET</strong> /login</span>
+			<p>this route is responsible for loging users, it takes a json data payload of username and password</p>
+			<code class="language-bash">
+				curl -d '{"username":"romr","password":"apple23"}' -H 'Content-Type: application/json' -X GET http://auth-internship-app.herokuapp.com/login
+			</code>
+		</div>
+		<div class="element">
+			<span><strong>POST</strong> /forgot</span>
+			<p>this route is used to change user password, this route takes a json payload of email newpassword</p>
+			<code class="language-bash">
+				curl -d '{"email":"tomr@rom.co","newpassword":"apsdfsdfple23"}' -H 'Content-Type: application/json' -X POST http://auth-internship-app.herokuapp.com/forgot
+			</code>
+		</div>
+	</div>
+	</main>
+</body>
+</html> 

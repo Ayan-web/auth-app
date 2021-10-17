@@ -1,0 +1,9 @@
+.container{
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	gap: 20px
+}
+code{
+	font-size:16px;
+}
