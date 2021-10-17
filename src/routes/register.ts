@@ -5,6 +5,8 @@ import {hash} from 'bcrypt'
 const router = Router()
 
 router.post('/',async(req:Request,res:Response)=>{
+	
+	// we don't check for validation as we expect the client the request after all checks
 	const { username, email, password} = req.body;
 	if (!(email && password && username)) {
 		return res.status(404).send("All input is required");
@@ -25,6 +27,7 @@ router.post('/',async(req:Request,res:Response)=>{
 	})
 	try{
 		await user.save();
+		res.send("registration sucess")
 	}
 	catch(err)
 	{
@@ -32,6 +35,5 @@ router.post('/',async(req:Request,res:Response)=>{
 
 	}
 })
-
 
 export default router;

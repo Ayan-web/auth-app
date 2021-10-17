@@ -2,6 +2,8 @@ import dotenv from 'dotenv';
 import express from 'express';
 import { connect } from 'mongoose';
 import Register from './routes/register'
+import Login from './routes/login'
+import Forgot from './routes/forgot'
 
 // configure api
 dotenv.config();
@@ -19,6 +21,8 @@ app.use(express.json())
 
 // routes
 app.use('/register',Register)
+app.use('/login',Login)
+app.use('/forgot',Forgot)
 
 
 export default app
