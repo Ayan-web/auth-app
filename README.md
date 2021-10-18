@@ -46,6 +46,16 @@ npm install
 npm run postinstall
 ```
 
+### environment variables
+
+```sh
+cat .env
+MONGO_URL=#mongodb:url
+PORT=#8080
+```
+
+replace the comments with actual url and port 
+
 ### starting the project 
 
 ```sh
