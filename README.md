@@ -54,7 +54,7 @@ MONGO_URL=#mongodb:url
 PORT=#8080
 ```
 
-replace the comments with actual url and port 
+replace the comments with actual `URL` and `PORT` 
 
 ### starting the project 
 
